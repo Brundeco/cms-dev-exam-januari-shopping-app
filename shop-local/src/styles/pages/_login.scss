@@ -1,0 +1,33 @@
+.form-wrapper {
+    width: 100vw;
+    padding: 10%;
+}
+
+.form-wrapper h2 {
+    @include h2-section-title;
+    margin-bottom: 5vh;
+}
+
+input.user-credentials {
+    background: $theme-brown;
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    padding: 3% 6%;
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+
+input.user-credentials::placeholder {
+    color: white !important;
+    box-sizing: border-box;
+}
+
+input.form-submit {
+    background: $base-black;
+    color: $base-white;
+    margin-top: 5vh;
+}
