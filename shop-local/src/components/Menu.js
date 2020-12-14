@@ -4,11 +4,16 @@ import { FontAwesome } from ".";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default () => {
   const [menu, setMenu] = useState(false);
   const [menuLinks, setMenuLinks] = useState("page-links hide");
-  const [cursorEvents, setCursorEvents] = useState("menu-wrapper cursor-ev-false");
+  const [cursorEvents, setCursorEvents] = useState(
+    "menu-wrapper cursor-ev-false"
+  );
+  const [openMenu, setOpenMenu] = useState("menu-buttons show");
+  const [closeMenu, setCloseMenu] = useState("close-menu hide");
 
   const handleClick = () => {
     let menuState = menu;
@@ -19,6 +24,12 @@ export default () => {
     menuState
       ? setCursorEvents("menu-wrapper cursor-ev-true")
       : setCursorEvents("menu-wrapper cursor-ev-false");
+    menuState
+      ? setOpenMenu("menu-buttons hide")
+      : setOpenMenu("menu-buttons show");
+    menuState
+      ? setCloseMenu("close-menu show")
+      : setCloseMenu("close-menu hide");
   };
 
   useEffect(() => {
@@ -27,10 +38,13 @@ export default () => {
 
   return (
     <div className={cursorEvents}>
-      <div className="menu-buttons" onClick={handleClick}>
+      <div className={openMenu} onClick={handleClick}>
         <div className="bar bar-1"></div>
         <div className="bar bar-2"></div>
         <div className="bar bar-3"></div>
+      </div>
+      <div className={closeMenu} onClick={handleClick}>
+        <FontAwesome icon={faTimes} />
       </div>
       <div className={menuLinks}>
         <div>
