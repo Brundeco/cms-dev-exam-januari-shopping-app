@@ -1,0 +1,30 @@
+body {
+  position: relative;
+  width: 100%;
+  background-color: $base-white;
+  background: $theme-gradient;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: $base-black;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection { background: $base-black; color: lightgray; }
+
+p.main-paragraph {
+  @include main-paragraph;
+}
+
+h2.h2-heading {
+  @include h2-section-title-white;
+}

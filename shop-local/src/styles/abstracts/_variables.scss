@@ -1,0 +1,18 @@
+/* Colors */
+$base-black: #000;
+$base-white: #fff;
+$theme-brown: #E0A880;
+
+$text-gray: #969696;
+$soft-grey :#F7F7F7;
+$med-grey: #707070;
+
+$color-none: rgba(0,0,0,0);
+
+$theme-gradient: linear-gradient(to top, #e96443, #EEBA94);
+/* Transitions */
+$base-transition: all .5s;
+$fast-transition: all .2s;
+$slow-transition: all 2s;
+$smooth-transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+$bezier-transition: all .2s cubic-bezier(0.200, 0.250, 0.925, 0.470);

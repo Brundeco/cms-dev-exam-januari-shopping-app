@@ -1,0 +1,26 @@
+@mixin h2-section-title {
+  font-size: 2em;
+  line-height: 1.5em;
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin h2-section-title-white {
+  font-size: 2em;
+  line-height: 1.5em;
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+}
+
+@mixin main-paragraph {
+  font-weight: 300;
+  font-size: 0.9em;
+  line-height: 1.7em;
+  text-transform: uppercase;
+  font-family: montserrat, sans-serif;
+  font-style: normal;
+  color: $text-gray;
+}

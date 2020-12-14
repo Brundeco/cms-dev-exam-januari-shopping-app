@@ -1,0 +1,275 @@
+.menu {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.menu-bars {
+  width: 80px;
+  height: 15px;
+  position: absolute;
+  right: 7%;
+  top: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 20;
+  pointer-events: all;
+  margin-right: 30px;
+  padding: 2vh 0;
+  &:hover {
+    cursor: pointer;
+    // transform: scaleX(1.6);
+    // transition: 0.2s ease-in-out;
+  }
+  &:hover .menu-bar-top {
+    cursor: pointer;
+    transform: scaleX(1.6);
+    transition: 0.2s ease-in-out;
+  }
+  &:hover .menu-bar-bottom {
+    cursor: pointer;
+    transform: scaleX(0.6);
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.menu-bar-top {
+  background-color: $med-grey;
+  height: 1px;
+  width: 50%;
+  transition: 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.menu-bar-bottom {
+  background-color: $med-grey;
+  height: 1px;
+  width: 50%;
+  transition: 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.bar-top-true {
+  height: 1px;
+}
+
+.bar-bottom-true {
+  height: 1px;
+}
+
+.bar-top-false {
+  width: 0px;
+}
+
+.bar-bottom-false {
+  width: 0px;
+}
+
+.menu-button-text {
+  position: absolute;
+  font-weight: 100;
+  font-size: 0.8em;
+  opacity: 0;
+  margin-right: 30%;
+  transition: opacity 3s $base-transition;
+}
+
+.menu-button-text-show {
+  margin-right: 0;
+  font-weight: 200;
+  font-size: 1.5em;
+  opacity: 1;
+  transition: $fast-transition;
+  &:hover {
+    transition: $fast-transition;
+    color: $med-grey;
+  }
+}
+
+.page-links {
+  width: 100%;
+  height: 100vh;
+  background-color: $base-white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 7%;
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+.menu-top {
+  margin-bottom: 40px;
+}
+
+.menu-bottom {
+  margin-top: 40px;
+}
+
+.menu-bottom a {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.menu-top a {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.menu-border-wrapper {
+  width: 10%;
+  display: flex;
+  margin-right: 25px;
+}
+
+.menu-border-in {
+  width: 90%;
+  transition: 1.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.menu-border-out {
+  width: 0%;
+  transition: 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+.menu-border {
+  height: 0.5px;
+  width: 100%;
+  background-color: rgb(194, 194, 194);
+}
+
+.link-arrow {
+  margin-left: 15px;
+  display: inline-block;
+  opacity: 0;
+  transition: $base-transition;
+}
+
+.page-links a {
+  margin: 20px 0;
+  display: block;
+  &:hover .link-arrow {
+    transition: $base-transition;
+    opacity: 1;
+    margin-left: 30px;
+    // color: $base-green;
+  }
+}
+
+.border-arrow {
+  margin-left: 15px;
+  display: inline-block;
+  opacity: 0;
+}
+
+.show-menu {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.show-menu ul {
+  text-align: right;
+}
+
+.hide-menu {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  text-align: right;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1.6s cubic-bezier(1, 0, 0, 1) 1;
+  animation-delay: -0.15s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fade-in-left-one {
+  animation: fadeInLeft 1.6s cubic-bezier(1, 0, 0, 1) 1;
+  animation-delay: -0.3s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fade-in-left-two {
+  animation: fadeInLeft 1.6s cubic-bezier(1, 0, 0, 1) 1;
+  animation-delay: -0.45s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fade-in-left-three {
+  animation: fadeInLeft 1.6s cubic-bezier(1, 0, 0, 1) 1;
+  animation-delay: -0.6s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fade-in-left-four {
+  animation: fadeInLeft 1.6s cubic-bezier(1, 0, 0, 1) 1;
+  animation-delay: -0.75s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fade-in-none {
+  animation: fadeInRight 1.6s cubic-bezier(1, 0, 0, 1) 1;
+  opacity: 0;
+  transition: ease-in-out 3s;
+}
+
+@media only screen and (max-width: 600px) {
+  .link-arrow {
+    display: none;
+  }
+
+  .menu-bars {
+    margin-right: 0px;
+  }
+
+  .menu-border-wrapper {
+    width: 10%;
+    display: flex;
+    margin-right: 0px;
+  }
+
+  .menu-top a {
+    font-weight: 300;
+  }
+
+  .menu-bottom a {
+    font-weight: 700;
+  }
+
+  .menu-border-in {
+    width: 90%;
+    transition: 1.5s cubic-bezier(1, 0, 0, 1);
+  }
+
+  .menu-border-out {
+    width: 0%;
+    transition: 0.2s cubic-bezier(1, 0, 0, 1);
+  }
+
+  .menu-border {
+    height: 0.5px;
+    width: 100%;
+    background-color: rgb(194, 194, 194);
+  }
+}
